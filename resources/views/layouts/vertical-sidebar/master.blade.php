@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Gull - Laravel 7 + Bootstrap 4 admin template</title>
+    <title>Library Management System</title>
     <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,400i,600,700,800,900" rel="stylesheet">
     @yield('before-css')
     {{-- theme css --}}
@@ -15,6 +15,9 @@
               asset('assets\fonts\iconsmind\iconsmind.css')}}">
     <link id="gull-theme" rel="stylesheet" href="{{  asset('assets/styles/css/themes/lite-purple.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/styles/vendor/perfect-scrollbar.css')}}">
+
+    <link rel="stylesheet" href="http://fire_certificates.test/assets/styles/vendor/pickadate/classic.css">
+    <link rel="stylesheet" href="http://fire_certificates.test/assets/styles/vendor/pickadate/classic.date.css">
 
     <link rel="stylesheet" href="{{ asset('assets/fonts/fontawesome-free-5.10.1-web/css/all.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/styles/vendor/metisMenu.min.css') }}">

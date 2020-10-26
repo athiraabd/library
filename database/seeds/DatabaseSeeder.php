@@ -14,15 +14,9 @@ class DatabaseSeeder extends Seeder
         \App\User::create([
             'name' => 'Administrator',
             'password' => \Illuminate\Support\Facades\Hash::make('secret'),
-            'email' => 'admin@firecert.com'
+            'email' => 'admin@test.com'
         ]);
 
-        $this->call(PremiseTypeSeeder::class);
-        $this->call(PremiseCategorySeeder::class);
-        $this->call(ZoneSeeder::class);
-        $this->call(StateCitySeeder::class);
-        $this->call(OfficeSeeder::class);
-        $this->call(PremiseDetailSeeder::class);
 
     }
 }

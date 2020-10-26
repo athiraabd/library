@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sistem Pengurusan Perakuan BOMBA</title>
+    <title>Library Management System</title>
     <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,400i,600,700,800,900" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('assets/styles/css/themes/lite-purple.min.css')}}">
 </head>
@@ -18,13 +18,13 @@
                 <div class="col-md-6">
                     <div class="p-4">
                         <div class="auth-logo text-center mb-4">
-                            <img src="{{asset('assets/images/logo.svg')}}" alt="">
+                            <img src="{{asset('images/book.png')}}" alt="">
                         </div>
-                        <h1 class="mb-3 text-18">Log Masuk</h1>
+                        <h1 class="mb-3 text-18">Log In</h1>
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
                             <div class="form-group">
-                                <label for="email">Emel</label>
+                                <label for="email">Email</label>
                                 <input id="email"
                                        class="form-control form-control-rounded @error('email') is-invalid @enderror"
                                        name="email" value="{{ old('email') }}" required autocomplete="email"
@@ -36,7 +36,7 @@
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label for="password">Kata laluan</label>
+                                <label for="password">Password</label>
                                 <input id="password" type="password"
                                        class="form-control form-control-rounded @error('password') is-invalid @enderror"
                                        name="password" required autocomplete="current-password">
@@ -59,16 +59,16 @@
                                 </div>
                             </div>
 
-                            <button class="btn btn-rounded btn-primary btn-block mt-2">Log masuk</button>
+                            <button class="btn btn-rounded btn-primary btn-block mt-2">Log In</button>
 
                         </form>
-                        @if (Route::has('password.request'))
+                        {{--@if (Route::has('password.request'))
 
                             <div class="mt-3 text-center">
 
                                 <a href="{{ route('password.request') }}" class="text-muted"><u>Terlupa kata laluan?</u></a>
                             </div>
-                        @endif
+                        @endif--}}
                     </div>
                 </div>
                 <div class="col-md-6 text-center "

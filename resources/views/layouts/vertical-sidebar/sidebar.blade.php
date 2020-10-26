@@ -1,7 +1,7 @@
 <!-- start sidebar -->
 <div class="sidebar-panel">
     <div class="gull-brand px-3 text-center my-4 d-flex justify-content-center align-items-center">
-        <img class="ml-auto" src="{{ asset('assets/images/logo.svg') }}" alt="">
+        <img class="ml-auto" src="{{ asset('images/book.png') }}" alt="">
         <!-- <span class=" item-name text-20 text-primary font-weight-700">GULL</span> -->
         <div class="sidebar-compact-switch ml-auto"><span></span></div>
 
@@ -15,153 +15,75 @@
 
             <div class="main-menu">
                 <ul class="metismenu" id="menu">
+                    <li class="py-10 text-center">
+                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <h5 class="d-inline-block text-dark">
+                                {{ Auth::user()->name }} <span class="caret"></span>
+                            </h5>
+                        </a>
+
+                        @php $customer = Auth::user()->id  @endphp
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('logout') }}"
+                               onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                  style="display: none;">
+                                @csrf
+                            </form>
+                        </div>
+                    </li>
                     <li class="Ul_li--hover">
                         <a class=" " href="{{ route('dashboard') }}">
-                            <i class="i-Home-Window text-20 mr-2 text-muted"></i>
-                            <span class="item-name  text-muted">Laman Utama</span>
+                            <i class="i-Home-2 text-20 mr-2 text-muted"></i>
+                            <span class="item-name  text-muted">Dashboard</span>
                         </a>
                     </li>
-                    <li class="Ul_li--hover {{ (request()->path() == 'premise') ? 'mm-active' : '' }}" >
-                        <a class="has-arrow" href="#">
-                            <i class="i-Building text-20 mr-2 text-muted"></i>
-                            <span class="item-name  text-muted">Premis</span>
+                    <li class="Ul_li--hover">
+                        <a class=" " href="{{ route('books.index') }}">
+                            <i class="i-Book text-20 mr-2 text-muted"></i>
+                            <span class="item-name  text-muted">Books</span>
                         </a>
-                        <ul class="mm-collapse">
-                            <li class="item-name">
-                                <a href="{{ route('premise.index') }}">
-                                    <i class="nav-icon i-Data"></i>
-                                    <span class="item-name">Maklumat Premis</span>
-                                </a>
-                            </li>
-
-                        </ul>
-                    </li>
-                    <li class="Ul_li--hover {{ (request()->path() == 'application') ? 'mm-active' : '' }}">
-                        <a class="has-arrow" href="#">
-                            <i class="i-Library text-20 mr-2 text-muted"></i>
-
-                            <span class="item-name  text-muted">Fail</span>
-                        </a>
-                        <ul class="mm-collapse">
-                            <li class="item-name">
-                                <a href="{{ route('application.create') }}">
-                                    <i class="nav-icon i-File"></i>
-                                    <span class="item-name">Buka Fail</span>
-                                </a>
-                            </li>
-                            <li class="item-name">
-                            <li class="nav-item">
-                                <a href="{{ route('application.index') }}">
-                                    <i class="nav-icon i-File"></i>
-                                    <span class="item-name">Senarai Fail</span>
-                                </a>
-                            </li>
                     </li>
 
-                </ul>
-                </li>
-{{--                <li class="Ul_li--hover">--}}
-{{--                    <a class="has-arrow" href="#">--}}
-{{--                        <i class="i-Suitcase text-20 mr-2 text-muted"></i>--}}
-{{--                        <span class="item-name  text-muted">Pemeriksaan</span>--}}
-{{--                    </a>--}}
-{{--                    <ul class="mm-collapse">--}}
-{{--                        <li class="item-name">--}}
-{{--                            <a href="#">--}}
-{{--                                <i class="nav-icon i-Crop-2"></i>--}}
-{{--                                <span class="item-name">Senarai Pemeriksaan</span>--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-{{--                    </ul>--}}
-{{--                </li>--}}
-{{--                <li class="Ul_li--hover">--}}
-{{--                    <a class="has-arrow" href="#">--}}
-{{--                        <i class="i-Computer-Secure text-20 mr-2 text-muted"></i>--}}
-{{--                        <span class="item-name  text-muted">Sijil Perakuan</span>--}}
-{{--                    </a>--}}
-{{--                    <ul class="mm-collapse">--}}
+                    <li class="Ul_li--hover">
+                        <a class=" " href="{{ route('magazines.index') }}">
+                            <i class="i-Open-Book text-20 mr-2 text-muted"></i>
+                            <span class="item-name  text-muted">Magazines</span>
+                        </a>
+                    </li>
 
-{{--                        <li class="item-name">--}}
-{{--                            <a href="contact-list-table.html">--}}
-{{--                                <i class="nav-icon i-Add-File"></i>--}}
-{{--                                <span class="item-name">Penghasilan Baru</span>--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-{{--                        <li class="item-name">--}}
-{{--                            <a href="invoice.html">--}}
-{{--                                <i class="nav-icon i-Add-File"></i>--}}
-{{--                                <span class="item-name">Pindaan</span>--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-{{--                        <li class="item-name">--}}
-{{--                            <a href="inbox.html">--}}
-{{--                                <i class="nav-icon i-Add-File"></i>--}}
-{{--                                <span class="item-name">Gantian</span>--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
+                    <li class="Ul_li--hover">
+                        <a class=" " href="{{ route('newspapers.index') }}">
+                            <i class="i-Newspaper text-20 mr-2 text-muted"></i>
+                            <span class="item-name  text-muted">Newspapers</span>
+                        </a>
+                    </li>
 
-{{--                    </ul>--}}
-{{--                </li>--}}
+                    <li class="Ul_li--hover">
+                        <a class=" " href="{{ route('issues.index') }}">
+                            <i class="i-Arrow-Barrier text-20 mr-2 text-muted"></i>
+                            <span class="item-name  text-muted">Issued</span>
+                        </a>
+                    </li>
 
-{{--                <!-- <p class="main-menu-title text-muted ml-3 font-weight-700 text-13 mt-4 mb-2">UI Elements</p> -->--}}
+                    <li class="Ul_li--hover">
+                        <a class=" " href="{{ route('return') }}">
+                            <i class="i-Arrow-Around text-20 mr-2 text-muted"></i>
+                            <span class="item-name  text-muted">Returned</span>
+                        </a>
+                    </li>
 
-{{--                <li class="Ul_li--hover">--}}
-{{--                    <a class="has-arrow" href="#">--}}
-{{--                        <i class="i-File-Clipboard-File--Text text-20 mr-2 text-muted"></i>--}}
-{{--                        <span class="item-name  text-muted">Pendakwaan Kes</span>--}}
-{{--                    </a>--}}
-{{--                    <ul class="mm-collapse">--}}
-
-{{--                        <li class="item-name">--}}
-{{--                        <a class="has-arrow cursor-pointer">--}}
-{{--                            <i class="nav-icon i-File-Clipboard-Text--Image"></i>--}}
-{{--                            <span class="item-name">Senarai Kes</span>--}}
-
-{{--                        </a>--}}
-{{--                        <ul class="mm-collapse">--}}
-{{--                            <li class="item-name">--}}
-{{--                                <a class="" href="#">Kertas Siasatan</a>--}}
-{{--                            </li>--}}
-{{--                            <li class="item-name">--}}
-{{--                                <a class="" href="#">Pendakwaan</a>--}}
-{{--                            </li>--}}
-{{--                        </ul>--}}
-{{--                        </li>--}}
-{{--                    </ul>--}}
-{{--                </li>--}}
-{{--                <li class="Ul_li--hover">--}}
-{{--                    <a class="" href="#">--}}
-{{--                        <i class="i-Money1 mr-2 text-muted"></i>--}}
-{{--                        <span class="item-name  text-muted">Bayaran</span>--}}
-{{--                    </a>--}}
-{{--                </li>--}}
-{{--                    <li class="Ul_li--hover">--}}
-{{--                        <a class="" href="#">--}}
-{{--                            <i class="i-Bar-Chart mr-2 text-muted"></i>--}}
-{{--                            <span class="item-name  text-muted">Laporan</span>--}}
-{{--                        </a>--}}
-{{--                    </li>--}}
-{{--                <li class="Ul_li--hover">--}}
-{{--                    <a class="has-arrow">--}}
-{{--                        <i class="i-Administrator text-20 mr-2 text-muted"></i>--}}
-{{--                        <span class="item-name  text-muted">Profil Diri</span>--}}
-{{--                    </a>--}}
-{{--                    <ul class="mm-collapse">--}}
-{{--                        <li class="item-name">--}}
-{{--                            <a href="signup.html">--}}
-{{--                                <i class="nav-icon i-Add-User"></i>--}}
-{{--                                <span class="item-name">Kemaskini Profil</span>--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-{{--                        <li class="item-name">--}}
-{{--                            <a href="forgot.html">--}}
-{{--                                <i class="nav-icon i-Find-User"></i>--}}
-{{--                                <span class="item-name">Daftar Keluar</span>--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
-
-{{--                    </ul>--}}
-{{--                </li>--}}
+                    <li class="Ul_li--hover">
+                        <a class=" " href="{{ route('latereturn') }}">
+                            <i class="i-Danger text-20 mr-2 text-muted"></i>
+                            <span class="item-name  text-muted">Late Returned</span>
+                        </a>
+                    </li>
 
                 </ul>
             </div>

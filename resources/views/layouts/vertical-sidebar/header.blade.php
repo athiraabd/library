@@ -8,7 +8,9 @@
             </div>
         </div>
 
-        <i class="i-Add-UserStar mr-3 text-20 cursor-pointer" data-toggle="tooltip" data-placement="top" title=""
+        <i class="i-Open-Book h4 px-3"></i><h4>Library Management System</h4>
+
+        {{--<i class="i-Add-UserStar mr-3 text-20 cursor-pointer" data-toggle="tooltip" data-placement="top" title=""
             data-original-title="Todo"></i>
         <i class="i-Speach-Bubble-3 mr-3 text-20 cursor-pointer" data-toggle="tooltip" data-placement="top" title=""
             data-original-title="Chat"></i>
@@ -17,14 +19,14 @@
         <i class="i-Calendar-4 mr-3 mobile-hide text-20 cursor-pointer" data-toggle="tooltip" data-placement="top"
             title="" data-original-title="Calendar"></i>
         <i class="i-Checkout-Basket mobile-hide mr-3 text-20 cursor-pointer" data-toggle="tooltip" data-placement="top"
-            title="" data-original-title="Calendar"></i>
+            title="" data-original-title="Calendar"></i>--}}
 
     </div>
     <div class="header-part-right">
         <!-- Full screen toggle -->
         <i class="i-Full-Screen header-icon d-none d-sm-inline-block" data-fullscreen=""></i>
         <!-- Grid menu Dropdown -->
-        <div class="dropdown dropleft">
+        {{--<div class="dropdown dropleft">
             <i class="i-Safe-Box text-muted header-icon" role="button" id="dropdownMenuButton" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false"></i>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -37,6 +39,6 @@
                     <a href="#"><i class="i-Ambulance"></i> Support</a>
                 </div>
             </div>
-        </div>
+        </div>--}}
 </header>
 <!-- header close -->
