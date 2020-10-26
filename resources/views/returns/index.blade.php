@@ -22,7 +22,6 @@
                             <th scope="col">Issue Date</th>
                             <th scope="col">Due Date</th>
                             <th scope="col">Returned Date</th>
-                            <th scope="col">Status</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -33,7 +32,6 @@
                                 <td>{{ $issue->issue_date->format('d M Y') }}</td>
                                 <td>{{ $issue->due_date->format('d M Y') }}</td>
                                 <td>{{ $issue->return_date->format('d M Y') }}</td>
-                                <td>{{ $issue->statusTitle }}</td>
                             </tr>
                         @endforeach
                         </tbody>

@@ -62,8 +62,7 @@
                                 <div class="input-group">
                                     <input id="picker4"
                                            class="form-control datepicker @error('return_date') is-invalid @enderror"
-                                           data-date-format="dd/mm/yyyy" name="return_date"
-                                           value="{{ old('return_date', $issue->return_date->format('d/m/Y') ?? '') }}">
+                                           data-date-format="dd/mm/yyyy" name="return_date">
                                     <div class="input-group-prepend">
                                         <div class="input-group-text">
                                             <i class="icon-regular i-Calendar-4"></i>
