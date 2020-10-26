@@ -6,94 +6,12 @@
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
     </expand>
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21b46796-e524-455f-afa2-37fe2803d53d" name="Default Changelist" comment="Remove charts in dashboard, add bar chart in dashboard">
+    <list default="true" id="21b46796-e524-455f-afa2-37fe2803d53d" name="Default Changelist" comment="Completed LMS">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/City.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Document.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/FcApplication.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ExcelController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FcApplicationController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/InspectionController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PdfController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PremiseController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Inspection.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Notice.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Office.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/PremiseCategory.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/PremiseDetail.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/PremiseType.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/State.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Zone.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_26_053846_create_states_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_26_053906_create_cities_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_26_060217_create_zones_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_26_065235_create_premise_types_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_26_065344_create_premise_categories_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_26_070020_create_offices_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_26_070853_create_premise_details_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_26_075330_create_fc_applications_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_26_075609_create_documents_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_26_075931_create_payments_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_26_080221_create_notices_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_26_080726_create_inspections_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_26_080813_create_inspection_postpones_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_26_081206_create_inspection_issues_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_29_034703_alter_offices_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_08_29_050418_alter_fcapplications_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_01_163347_alter_fc_application_add_approved_date.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/OfficeSeeder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/PremiseCategorySeeder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/PremiseDetailSeeder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/PremiseTypeSeeder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/StateCitySeeder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/UserSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UserSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/ZoneSeeder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/js/common-bundle-script.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/common-bundle-script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/styles/css/themes/dark-purple.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/styles/css/themes/dark-purple.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/styles/css/themes/lite-blue.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/styles/css/themes/lite-blue.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/styles/css/themes/lite-purple.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/styles/css/themes/lite-purple.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/fcapplication/approving.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/fcapplication/create.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/fcapplication/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/inspection/create.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/inspection/form.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/common/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/common/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/vertical-sidebar/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/vertical-sidebar/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/vertical-sidebar/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/vertical-sidebar/master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/vertical-sidebar/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/vertical-sidebar/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pdf/fc6.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pdf/head_fc6.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/premise/create.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/premise/form.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/premise/index.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/premise/upload-excel.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -298,7 +216,7 @@
       <workItem from="1603165161120" duration="3790000" />
       <workItem from="1603349501715" duration="16613000" />
       <workItem from="1603425717083" duration="15024000" />
-      <workItem from="1603675246671" duration="10886000" />
+      <workItem from="1603675246671" duration="11509000" />
     </task>
     <task id="LOCAL-00001" summary="add krlove:model:generate">
       <created>1598420114945</created>
@@ -363,7 +281,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599449042524</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Completed LMS">
+      <created>1603686360902</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1603686360902</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -391,7 +316,8 @@
     <MESSAGE value="add logo" />
     <MESSAGE value="approving, login layout,dashboard, premise index, create inspection" />
     <MESSAGE value="Remove charts in dashboard, add bar chart in dashboard" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove charts in dashboard, add bar chart in dashboard" />
+    <MESSAGE value="Completed LMS" />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed LMS" />
   </component>
   <component name="WindowStateProjectService">
     <state x="535" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598691814593">
@@ -422,10 +348,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1603442942056" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1603686170594">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1603686740097">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603686170594" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603686740097" />
     <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1603352211215">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
