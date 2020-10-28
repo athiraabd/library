@@ -19,6 +19,7 @@ class ReportController extends Controller
 
         $data = Issue::with('book')
             ->whereMonth('issue_date', '=', '10')
+            ->whereYear('issue_date', '=', '2020')
             ->orderBy('issue_date', 'ASC')
             ->get();
 
