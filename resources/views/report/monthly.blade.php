@@ -1,7 +1,12 @@
 @extends('layouts.master')
 @section('main-content')
-
-
+@section('page-css')
+<style>
+    #users-table_filter, .dataTables_paginate  {
+        float: right;
+    }
+</style>
+@endsection
     <div class="row">
         <div class="col-lg-12 col-md-12">
             <div class="card mb-4">
@@ -13,16 +18,8 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                        <div class="input-append date" id="datepicker" data-date="02-2012"
-                             data-date-format="mm-yyyy">
-
-                            <input  type="text" readonly="readonly" name="date" >
-                            <span class="add-on"><i class="icon-th"></i></span>
-                        </div>
-
                         <div class="table-responsive">
-                        <table id="users-table" class="display table table-striped table-bordered" style="width:100%">
+                        <table id="users-table" class="display table table-striped table-borderless" style="width:100%">
                             <thead>
                             <tr>
                                 <th scope="col">Book Title</th>
