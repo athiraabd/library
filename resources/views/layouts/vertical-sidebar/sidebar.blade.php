@@ -15,28 +15,7 @@
 
             <div class="main-menu">
                 <ul class="metismenu" id="menu">
-                    <li class="py-10 text-center">
-                        <a class="nav-link dropdown-toggle" href="#" role="button"
-                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            <h5 class="d-inline-block text-dark">
-                                {{ Auth::user()->name }} <span class="caret"></span>
-                            </h5>
-                        </a>
 
-                        @php $customer = Auth::user()->id  @endphp
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ route('logout') }}"
-                               onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
-                            </a>
-
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                                  style="display: none;">
-                                @csrf
-                            </form>
-                        </div>
-                    </li>
                     <li class="Ul_li--hover">
                         <a class=" " href="{{ route('dashboard') }}">
                             <i class="i-Home-2 text-20 mr-2 text-muted"></i>
@@ -64,25 +43,62 @@
                         </a>
                     </li>
 
-                    <li class="Ul_li--hover">
-                        <a class=" " href="{{ route('issues.index') }}">
-                            <i class="i-Arrow-Barrier text-20 mr-2 text-muted"></i>
+                    <li class="Ul_li--hover {{ (request()->path() == 'issued') ? 'mm-active' : '' }}" >
+                        <a class="has-arrow" href="#">
+                            <i class="i-Inbox-Into text-20 mr-2 text-muted"></i>
                             <span class="item-name  text-muted">Issued</span>
                         </a>
+                        <ul class="mm-collapse">
+                            <li class="item-name">
+                                <a class=" " href="{{ route('issues.index') }}">
+                                    <i class="i-Arrow-Barrier text-20 mr-2 text-muted"></i>
+                                    <span class="item-name  text-muted">All Issued</span>
+                                </a>
+                            </li>
+
+                            <li class="item-name">
+                                <a class=" " href="{{ route('return') }}">
+                                    <i class="i-Arrow-Around text-20 mr-2 text-muted"></i>
+                                    <span class="item-name  text-muted">Returned</span>
+                                </a>
+                            </li>
+
+                            <li class="item-name">
+                                <a class=" " href="{{ route('latereturn') }}">
+                                    <i class="i-Danger text-20 mr-2 text-muted"></i>
+                                    <span class="item-name  text-muted">Late Returned</span>
+                                </a>
+                            </li>
+
+                        </ul>
                     </li>
 
                     <li class="Ul_li--hover">
-                        <a class=" " href="{{ route('return') }}">
-                            <i class="i-Arrow-Around text-20 mr-2 text-muted"></i>
-                            <span class="item-name  text-muted">Returned</span>
+                        <a class=" " href="{{ route('monthly.report') }}">
+                            <i class="i-Receipt text-20 mr-2 text-muted"></i>
+                            <span class="item-name  text-muted">Reporting</span>
                         </a>
                     </li>
 
                     <li class="Ul_li--hover">
-                        <a class=" " href="{{ route('latereturn') }}">
-                            <i class="i-Danger text-20 mr-2 text-muted"></i>
-                            <span class="item-name  text-muted">Late Returned</span>
+                        <a class="has-arrow">
+                            <i class="i-Administrator text-20 mr-2 text-muted"></i>
+                            <span class="item-name  text-muted">{{ Auth::user()->name }}</span>
                         </a>
+                        <ul class="mm-collapse">
+                            <li class="item-name">
+                                <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                    <i class="nav-icon i-Checked-User"></i>
+                                    <span class="item-name">Sign Out</span>
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                      style="display: none;">
+                                    @csrf
+                                </form>
+                            </li>
+
+                        </ul>
                     </li>
 
                 </ul>

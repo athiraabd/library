@@ -22,6 +22,11 @@
     <link rel="stylesheet" href="{{ asset('assets/fonts/fontawesome-free-5.10.1-web/css/all.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/styles/vendor/metisMenu.min.css') }}">
 
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+
+
+
+
 
 
     {{-- page specific css --}}
@@ -83,6 +88,8 @@
 <script src="{{asset('assets/js/layout-sidebar-vertical.js')}}"></script>
 
 <script src="{{asset('assets/js/customizer.script.js')}}"></script>
+
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
 <script>
     $(function () {
         $('[data-toggle="tooltip"]').tooltip()

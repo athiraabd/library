@@ -10,26 +10,36 @@ use Yajra\DataTables\DataTables;
 
 class ReportController extends Controller
 {
-    public function monthlyReport () {
+    public function monthlyReport (Request $request) {
+
+        if(request()->ajax())
+        {
+            if(!empty($request->from_date))
+            {
+                $data = Issue::with('book')
+                    ->whereBetween('issue_date', array($request->from_date, $request->to_date))
+                    ->get();
+            }
+            else
+            {
+                $data = Issue::with('book')
+                    ->get();
+            }
+
+            return DataTables::of($data)
+                ->editColumn('issue_date', function ($datum){
+                    return Carbon::parse($datum->issue_date)->format('d M Y');
+                })
+                ->editColumn('due_date', function ($datum){
+                    return Carbon::parse($datum->due_date)->format('d M Y');
+                })
+                ->editColumn('status', function ($datum){
+                    return $datum->statusTitle;
+                })
+                ->make(true);
+        }
 
         return view ('report.monthly');
     }
 
-    public function dataMonthly() {
-
-        $data = Issue::with('book')
-            ->whereMonth('issue_date', '=', '10')
-            ->whereYear('issue_date', '=', '2020')
-            ->orderBy('issue_date', 'ASC')
-            ->get();
-
-        return DataTables::of($data)
-            ->editColumn('issue_date', function ($datum){
-                return Carbon::parse($datum->issue_date)->format('d M Y');
-            })
-            ->editColumn('due_date', function ($datum){
-                return Carbon::parse($datum->due_date)->format('d M Y');
-            })
-            ->make(true);
-    }
 }

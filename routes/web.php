@@ -31,7 +31,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/issued/data', 'HomeController@data')->name('issued.data');
 
     Route::get('/report/monthly', 'ReportController@monthlyReport')->name('monthly.report');
-    Route::get('/report/datamonthly', 'ReportController@dataMonthly')->name('monthly.data');
 
 });
 

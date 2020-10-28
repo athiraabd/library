@@ -2,9 +2,7 @@
 @section('main-content')
 @section('page-css')
 <style>
-    #users-table_filter, .dataTables_paginate  {
-        float: right;
-    }
+
 </style>
 @endsection
     <div class="row">
@@ -18,8 +16,22 @@
                             {{ session('status') }}
                         </div>
                     @endif
+
+                        <div class="row input-daterange">
+                            <div class="col-md-4">
+                                <input type="text" name="from_date" id="from_date" class="form-control" placeholder="From Date" readonly />
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" name="to_date" id="to_date" class="form-control" placeholder="To Date" readonly />
+                            </div>
+                            <div class="col-md-4">
+                                <button type="button" name="filter" id="filter" class="btn btn-primary">Filter</button>
+                                <button type="button" name="refresh" id="refresh" class="btn btn-default">Refresh</button>
+                            </div>
+                        </div><br/>
+
                         <div class="table-responsive">
-                        <table id="users-table" class="display table table-striped table-borderless" style="width:100%">
+                        <table id="issues-table" class="display table table-striped ul-contact-list-table" style="width:100%">
                             <thead>
                             <tr>
                                 <th scope="col">Book Title</th>
@@ -52,47 +64,75 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
     <script src="https://www.chartjs.org/samples/latest/utils.js"></script>
 
-
-    <script>
-        $("#datepicker").datepicker({
-            format: "mm-yyyy",
-            startView: "months",
-            minViewMode: "months"
-
-        });
-
-
-    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/css/bootstrap-datepicker.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.js"></script>
 
     <script src={{ asset('assets/js/vendor/datatables.min.js') }}></script>
     <script>
-        $(document).ready(function () {
-            $('#users-table').DataTable({
-                processing: true,
-                serverSide: true,
-                ajax: {
-                    url: '{{ route('monthly.data') }}'
-                },
-                columns: [
-                    {
-                        data: 'book.title',
-                        name: 'book.title',
-                    },
-                    {
-                        data: 'issue_date',
-                        name: 'issue_date',
-                    },
-                    {
-                        data: 'due_date',
-                        name: 'due_date',
-                    },
-                    {
-                        data: 'status',
-                        name: 'status',
-                    }
-                ],
+        $(document).ready(function(){
+            $('.input-daterange').datepicker({
+                todayBtn:'linked',
+                format:'yyyy-mm-dd',
+                autoclose:true
             });
+
+            load_data();
+
+            function load_data(from_date = '', to_date = '')
+            {
+                $('#issues-table').DataTable({
+                    processing: true,
+                    serverSide: true,
+                    ajax: {
+                        url: '{{ route('monthly.report') }}',
+                        data:{from_date:from_date, to_date:to_date}
+                    },
+                    columns: [
+                        {
+                            data: 'book.title',
+                            name: 'book.title',
+                        },
+                        {
+                            data: 'issue_date',
+                            name: 'issue_date',
+                        },
+                        {
+                            data: 'due_date',
+                            name: 'due_date',
+                        },
+                        {
+                            data: 'status',
+                            name: 'status',
+                        }
+                    ]
+                });
+            }
+
+            $('#filter').click(function(){
+                var from_date = $('#from_date').val();
+                var to_date = $('#to_date').val();
+                if(from_date != '' &&  to_date != '')
+                {
+                    $('#issues-table').DataTable().destroy();
+                    load_data(from_date, to_date);
+                }
+                else
+                {
+                    alert('Both Date is required');
+                }
+            });
+
+            $('#refresh').click(function(){
+                $('#from_date').val('');
+                $('#to_date').val('');
+                $('#issues-table').DataTable().destroy();
+                load_data();
+            });
+
+
         });
+
+
     </script>
 
 @endsection
