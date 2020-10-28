@@ -73,7 +73,7 @@
                 </div>
                 <div class="col-md-6 text-center "
                      style="background-size: cover;background-image: url({{asset('assets/images/photo-long-3.jpg')}}">
-                    <div class="pr-3 auth-right">
+                    {{--<div class="pr-3 auth-right">
                         <a class="btn btn-rounded btn-outline-primary btn-outline-email btn-block btn-icon-text"
                            href="signup.html">
                             <i class="i-Mail-with-At-Sign"></i> Sign up with Email
@@ -86,7 +86,7 @@
                             class="btn btn-rounded btn-outline-primary btn-block btn-icon-text btn-outline-facebook">
                             <i class="i-Facebook-2"></i> Sign up with Facebook
                         </a>
-                    </div>
+                    </div>--}}
                 </div>
             </div>
         </div>

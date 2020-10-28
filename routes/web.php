@@ -26,6 +26,12 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/returns', 'ReturnedController@index')->name('return');
     Route::get('/latereturns', 'LateReturnedController@index')->name('latereturn');
     Route::get('/issued/yearly', 'HomeController@issuedYearly')->name('issued.yearly');
+    Route::get('/issued/daily', 'HomeController@issuedDaily')->name('issued.daily');
+
+    Route::get('/issued/data', 'HomeController@data')->name('issued.data');
+
+    Route::get('/report/monthly', 'ReportController@monthlyReport')->name('monthly.report');
+    Route::get('/report/datamonthly', 'ReportController@dataMonthly')->name('monthly.data');
 
 });
 

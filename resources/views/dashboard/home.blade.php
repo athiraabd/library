@@ -53,6 +53,17 @@
             <div class="card-body">
                 <div class="card-title"> </div>
                 <canvas class="my-4" id="myChart" height="100px"></canvas>
+                <br/>
+                <table class="display table table-bordered" id="monthly-table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Month</th>
+                        <th scope="col">Total</th>
+                        <th scope ="col">View Report</th>
+                    </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
             </div>
         </div>
     </div>
@@ -140,4 +151,38 @@
             window.myLine = new Chart(ctx, config);
         });
     </script>
+
+<script src={{ asset('assets/js/vendor/datatables.min.js') }}></script>
+<script>
+    $(document).ready(function () {
+        let table = $('#monthly-table').DataTable({
+            processing: true,
+            serverSide: true,
+            ajax: {
+                url: '{{ route('issued.data') }}'
+            },
+            columns: [
+                {
+                    data: 'month',
+                    name: 'month',
+                },
+                {
+                    data: 'total',
+                    name: 'total',
+                },
+                {
+                    data: 'report',
+                    name: 'report',
+                }
+            ]
+
+        });
+
+        $('#monthly-table').on( 'click', 'tr', function () {
+
+        });
+    });
+</script>
+
+
 @endsection
