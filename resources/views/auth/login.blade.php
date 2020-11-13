@@ -59,6 +59,12 @@
                                 </div>
                             </div>
 
+                            <div class="form-group">
+                                <small>email: <b>admin@test.com</b> pwd: <b>secret</b></small><br>
+                                <small>make sure to run <b>php artisan migrate:fresh --seed</b></small>
+
+                            </div>
+
                             <button class="btn btn-rounded btn-primary btn-block mt-2">Log In</button>
 
                         </form>

@@ -62,7 +62,6 @@
                                     <span class="item-name  text-muted">Returned</span>
                                 </a>
                             </li>
-
                             <li class="item-name">
                                 <a class=" " href="{{ route('latereturn') }}">
                                     <i class="i-Danger text-20 mr-2 text-muted"></i>

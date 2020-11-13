@@ -208,7 +208,7 @@ $(window).on("load", function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! c:\laragon\www\library\resources\gull\assets\js\script.js */"./resources/gull/assets/js/script.js");
+module.exports = __webpack_require__(/*! C:\laragon\www\library\resources\gull\assets\js\script.js */"./resources/gull/assets/js/script.js");
 
 
 /***/ })
